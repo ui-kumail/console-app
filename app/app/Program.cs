@@ -82,7 +82,6 @@ public class Account
 
         resetWindow();
         adminActions(adminAction, acntID);
-
     }
 
     public void adminActions(int option, int ID)
@@ -104,6 +103,10 @@ public class Account
             string balance = Console.ReadLine();
 
             addAccount(acntID, name, phone, acntNo, balance);
+        }
+        else if (option == 2)
+        {
+            // update account
         }
         else if (option == 3)
         {
@@ -136,13 +139,9 @@ public class Account
         resetWindow();
 
         if (tempInput == "1")
-        {
             adminActions(1, ID);
-        }
         else
-        {
             showAdminOptions();
-        }
     }
 }
 
